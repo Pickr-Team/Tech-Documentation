@@ -18,27 +18,20 @@ pip install -r requirements.txt
 
 First of all, make sure you have installed **MySQL 8.0**
 
-Second, create a database called **pickr**
+Second, create a database for developing called **pickr**, and another database for testing called **pickr_test**
 
 Then, click **config.py**, which shows the MySQL configuration information.
 
 ​	Modify the **username**, **password** of the **SQLALCHEMY_DATABASE_URI**, the format is shown below
 
 ```
-mysql+pymysql://username:password@127.0.0.1:3306/pickr
+dev:  mysql+pymysql://your_own_username:your_own_password@127.0.0.1:3306/pickr
+test: mysql+pymysql://your_own_username:your_own_password@127.0.0.1:3306/pickr_test
 ```
 
 ### (3). Flask-Migrate:
 
-​	**Warning! Delete the `migrations` folder first after cloning the project! **
-
-​	Before run the project, we need to migrate database first, so that it will automatically generate tables. Type these commands below in the CMD.
-
-```python
-flask db init
-```
-
-​	This will add a migrations folder to your application. **Note: You only need to run this command once**
+​	Before run the project, we need to migrate database first, so that it will automatically generate tables. Type these commands below in the CMD. And it will add a migrations folder to your application.
 
 ```
 flask db migrate
@@ -49,9 +42,11 @@ flask db upgrade
 
 ### (4). Run project
 
-​	you can either run the command **python -m flask run** or click the green button in the upper right of the PyCharm IDE.  
+​	you can either run the command `python -m flask run` or click the green button in the upper right of the PyCharm IDE.  
 
-Finally, you can view the website [Pickr | Home](http://127.0.0.1:5000/) locally
+​	**Run project in different environment(default en:dev):**
+
+![](images/start-pickr-in-different-environment.png)
 
 ## 3. Technology Stack
 
