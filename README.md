@@ -194,7 +194,51 @@ class Student(db.Model):
 
 ### tests/
 
-​	This directory is for unit tests and integration tests
+​	This directory is for unit tests and system tests
+
+```python
+tests/
+├─system/
+├─unit/
+```
+
+#### system tests
+
+##### About
+
+​	We incorporate **Selenium** for automated browser testing. Upon initiating the script, the system automatically opens the **Chrome** browser to evaluate its functions.
+
+​	Another crucial test is **stress testing**, which can be executed using [Apache JMeter](https://jmeter.apache.org/index.html). Within 10 seconds, we will generate 850 requests to Pickr, focusing primarily on student login and topic submission requests.
+
+![](images/jmeter-conf.png)
+
+##### Quick Start
+
+1. run project in **TEST** environment
+
+   ![](images/run-pickr-in-test-env.png)
+
+2. start run_tests.py
+
+   Note: you have installed **Chrome**
+
+   ![](images/start-run-tests.png)
+
+3. start stress_testing.jmx
+
+   Note: you have installed **JMeter** and **Java**
+
+   1. open stress_testing.jmx
+   2. run test
+   3. view results
+
+   ![](images/jmeter.png)
+
+   ![](images/jmeter-view-results.png)
+
+#### unit tests
+
+​	TODO~
 
 ### app.py
 
