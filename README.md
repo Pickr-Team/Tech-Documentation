@@ -218,13 +218,17 @@ tests/
 
    ![](images/run-pickr-in-test-env.png)
 
-2. start run_tests.py
+2. run  ```seeding.py``` in **python console** (not Flask!)
+
+   ![](images/run-seeding.jpg)
+
+3. start run_tests.py
 
    Note: you have installed **Chrome**
 
    ![](images/start-run-tests.png)
 
-3. start stress_testing.jmx
+4. start stress_testing.jmx
 
    Note: you have installed **JMeter** and **Java**
 
